@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Layout HTML5 và CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Phần đầu trang (Header) và Chân trang (Footer) */
+        header, footer {
+            padding: 20px;
+            color: white;
+            background-color: #2c3e50;
+            text-align: center;
+        }
+
+        /* Thanh điều hướng (Nav) */
+        nav {
+            background-color: #34495e;
+            padding: 12px 20px;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        /* Khung chứa nội dung chính và cột phụ (sử dụng Flexbox để chia 2 cột) */
+        .container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Khu vực nội dung chính (Section) */
+        section {
+            flex: 7; /* Chiếm 70% chiều rộng */
+            padding: 15px;
+            background-color: #ecf0f1;
+        }
+
+        /* Bài viết bên trong (Article) */
+        article {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: white;
+            border-left: 4px solid #3498db;
+        }
+
+        article h3 {
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        /* Cột thông tin phụ bên phải (Aside) */
+        aside {
+            flex: 3; /* Chiếm 30% chiều rộng */
+            padding: 15px;
+            background-color: #dfe6e9;
+        }
+
+        aside h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Monday Times - Trang Tin Tức</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Thời sự</a></li>
+            <li><a href="#">Thể thao</a></li>
+            <li><a href="#">Công nghệ</a></li>
+            <li><a href="#">Thời tiết</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2>Tin tức nổi bật (Section)</h2>
+            
+            <article>
+                <h3>Bài viết 1: Xu hướng thiết kế Web với HTML5 (Article)</h3>
+                <p>Các thẻ ngữ nghĩa trong HTML5 giúp cấu trúc trang web trở nên rõ ràng hơn, hỗ trợ tối ưu hóa công cụ tìm kiếm (SEO) và giúp lập trình viên dễ dàng bảo trì mã nguồn.</p>
+            </article>
+
+            <article>
+                <h3>Bài viết 2: Kết hợp CSS Flexbox trong chia bố cục (Article)</h3>
+                <p>Thay vì chỉ sử dụng các thẻ div truyền thống, việc kết hợp các thẻ section, article và aside cùng CSS giúp giao diện hiển thị trực quan và hiện đại.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Thông tin bổ sung (Aside)</h2>
+            <p>Đây là khu vực cột bên (sidebar) thường dùng để đặt quảng cáo, bài viết xem nhiều nhất hoặc thông tin giới thiệu ngắn.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Monday Times. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
